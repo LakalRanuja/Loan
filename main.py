@@ -21,6 +21,10 @@ class Loan(db.Model):
     Guarantee = db.Column(db.Integer, nullable=False)
     amount = db.Column(db.Integer, nullable=False)
 
+class InvestMoney(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    gainAmount = db.Column(db.Integer, nullable=False)
+
 
 db.create_all()
 db.session.commit()
